@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.home.shop.ShopBarCodeManagementActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="260px"
+            android:layout_marginTop="230px"
+            android:src="@drawable/ic_meiyoutianjaitiaoma"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="暂时没有条码哦"
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginTop="2px">
+
+        <include layout="@layout/load_head"/>
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/pullablelistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#E0E0E0"
+            android:dividerHeight="2px"/>
+
+        <include layout="@layout/load_more"/>
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>

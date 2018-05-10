@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/in_titleBar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_titleBar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/tv_xiangqing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10px"
+                android:text="暂停红利提取"
+                android:textColor="@color/cl_333333"
+                android:textSize="34px" />
+
+            <TextView
+                android:id="@+id/tv_xiangqing_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_xiangqing_title"
+                android:layout_marginTop="27px"
+                android:text="为更好地服务广大的家人们，超级商家拓展异业联盟商家做出以下调整：
+1.拓展异业联盟商家价格从999元调整为369元。
+2.369服务商需在环游购商城转让500积分给被拓展人，在转让积分的同时必须勾选激活商城权限选项,才可在商城开设店铺及异业联盟商 家拓展。
+3. 服务商每拓展1名终端消费者奖励3红利积分，在完成100名终端消费者中成功拓展1名异业联盟商家，共计奖励并结算500红利积分。
+4.平台新规则公告执行后原规则自动终止，有其他规则的另行通知。
+有家人们的支持才有环游购商城的今天，您的支持是我们环游购商城团队前进的动力！
+未来的日子里环游购商城团队将竭诚为家人们服务，并带来更多实惠和利益，感谢家人们一路以来的支持与理解！
+由此给您造成的不便，敬请谅解！
+如上条款解释权归环游购商城所有！为更好地服务广大的家人们，超级商家拓展异业联盟商家做出以下调整：
+1.拓展异业联盟商家价格从999元调整为369元。
+2.369服务商需在环游购商城转让500积分给被拓展人，在转让积分的同时必须勾选激活商城权限选项,才可在商城开设店铺及异业联盟商 家拓展。
+3. 服务商每拓展1名终端消费者奖励3红利积分，在完成100名终端消费者中成功拓展1名异业联盟商家，共计奖励并结算500红利积分。
+4.平台新规则公告执行后原规则自动终止，有其他规则的另行通知。
+有家人们的支持才有环游购商城的今天，您的支持是我们环游购商城团队前进的动力！
+未来的日子里环游购商城团队将竭诚为家人们服务，并带来更多实惠和利益，感谢家人们一路以来的支持与理解！
+由此给您造成的不便，敬请谅解！
+如上条款解释权归环游购商城所有！"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_xiangqing_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_xiangqing_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10px"
+                android:text="环游购异业联盟"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px"/>
+
+            <TextView
+                android:id="@+id/tv_xiangqing_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_xiangqing_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10px"
+                android:text="2017-10-20"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_titleBar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="224px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300px"
+            android:src="@drawable/ic_no_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:text="暂无内容"
+            android:textColor="@color/gray_666"
+            android:textSize="32px" />
+    </LinearLayout>
+</RelativeLayout>

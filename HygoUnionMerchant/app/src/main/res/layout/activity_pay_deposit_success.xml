@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.deposit.PayDepositSuccessActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="386px"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="160px"
+                    android:layout_height="160px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60px"
+                    android:src="@drawable/ic_tixianchenggong"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20px"
+                    android:text="缴纳信誉保证金成功"
+                    android:textColor="@color/gray_666"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/tv_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:singleLine="true"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="72px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="缴纳详情"
+                android:textColor="@color/black_333"
+                android:textSize="26px"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="缴纳账户"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:maxWidth="500px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="缴纳金额"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:maxWidth="500px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="操作时间"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:maxWidth="500px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                style="@style/btn_green_commit"
+                android:layout_marginTop="90px"
+                android:text="完成"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

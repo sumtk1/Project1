@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/white"
+                                            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="200px"
+        android:layout_height="250px"
+        android:layout_marginLeft="20px"
+        android:background="@drawable/shape_border_gray_d0d0"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_marginTop="65px"
+            android:src="@drawable/ic_chakanquanbu"
+            app:layout_auto_baseheight="width"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="查看全部商品"
+            android:textColor="@color/blue_449ffb"
+            android:textSize="24px"/>
+
+    </LinearLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/bg_color"
+                                            android:orientation="vertical">
+
+    <com.zyd.wlwsdk.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textSize="36px"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_ccc"/>
+    </com.zyd.wlwsdk.autolayout.AutoRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zyd.wlwsdk.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30px">
+
+            <com.youth.banner.Banner
+                android:id="@+id/shop_banner"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                app:indicator_drawable_selected="@drawable/banner_selected_blue"
+                app:indicator_drawable_unselected="@drawable/banner_unselected_white"
+                app:indicator_height="6dp"
+                app:indicator_margin="3dp"
+                app:indicator_width="6dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_travel_or_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_management"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_chanpinguanli"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="产品管理"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_customer_order"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_kehudingdan"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="客户订单"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:layout_marginTop="1px"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_uploading"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_shuangchuanchanp"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="上传商品"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text=""
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shop_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_service_commodity"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_chanpinguanli"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="商品管理"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_service_order"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_kehudingdan"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="客户订单"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:layout_marginTop="1px"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_service_uploading"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_shuangchuanchanp"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="上传商品"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text=""
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shop_supermarket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_bar_code_management"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_tiaomaguanli"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="条码管理"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_warehousing_management"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_rukuguanli"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="入库管理"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315px"
+                    android:layout_marginTop="1px"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_add_bar_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_tianjaitiaoma"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="添加条码"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_commodity_warehousing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginTop="60px"
+                            android:src="@drawable/ic_shuangchuanchanp"
+                            app:layout_auto_baseheight="width"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30px"
+                            android:text="商品入库"
+                            android:textColor="@color/black_333"
+                            android:textSize="28px"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_complete_commodity_info"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_btn_white"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:text="完善商品信息"
+                android:textColor="@color/gray_666"
+                android:textSize="32px"
+                android:visibility="gone"/>
+
+        </com.zyd.wlwsdk.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

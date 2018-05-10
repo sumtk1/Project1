@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.setting.AccountSecurityActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_login_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginTop="20px"
+        android:background="@drawable/bg_btn_white">
+
+        <TextView
+            style="@style/textview_base_left"
+            android:drawableLeft="@drawable/ic_mima"
+            android:drawablePadding="30px"
+            android:text="修改登录密码"
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+        <ImageView
+            style="@style/imageview_right"
+            android:src="@drawable/ic_arrow_right"/>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_pay_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_below="@id/rl_modify_login_pwd"
+        android:background="@drawable/bg_btn_white">
+
+        <TextView
+            style="@style/textview_base_left"
+            android:drawableLeft="@drawable/ic_mima"
+            android:drawablePadding="30px"
+            android:text="修改支付密码"
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+        <ImageView
+            style="@style/imageview_right"
+            android:src="@drawable/ic_arrow_right"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

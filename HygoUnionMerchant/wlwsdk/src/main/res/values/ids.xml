@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--AutoLayout相关-->
+    <item name="id_tag_autolayout_size" type="id"></item>
+    <item name="id_tag_autolayout_padding" type="id"></item>
+    <item name="id_tag_autolayout_margin" type="id"></item>
+
+
+    <!-- Messages IDs -->
+    <item name="auto_focus" type="id" />
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="encode_failed" type="id" />
+    <item name="encode_succeeded" type="id" />
+    <item name="launch_product_query" type="id" />
+    <item name="quit" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="return_scan_result" type="id" />
+    <item name="search_book_contents_failed" type="id" />
+    <item name="search_book_contents_succeeded" type="id" />
+
+    <!--statusbarutil-->
+    <item name="statusbarutil_fake_status_bar_view" type="id" />
+    <item name="statusbarutil_translucent_view" type="id" />
+</resources>

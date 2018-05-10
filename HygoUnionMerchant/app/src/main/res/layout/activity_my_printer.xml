@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.printer.MyPrinterActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_printer"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/bg_btn_white_3dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/tianjiaicon"
+            android:drawablePadding="30px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="添加打印机"
+            android:textColor="@color/black_555"
+            android:textSize="32px"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_add_printer"
+        android:layout_marginTop="30px"/>
+
+</RelativeLayout>

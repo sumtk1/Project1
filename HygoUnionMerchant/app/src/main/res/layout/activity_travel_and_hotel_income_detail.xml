@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.income.travelandhotel.TravelAndHotelIncomeDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/in_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/green_21d1c1">
+
+        <ImageView
+            android:id="@+id/iv_toptitle_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="30px"
+            android:src="@drawable/fanhuibai"/>
+
+        <TextView
+            android:id="@+id/tv_toptitle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="36px"/>
+
+        <TextView
+            android:id="@+id/tv_toptitle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="231px"
+        android:layout_below="@id/in_titlebar"
+        android:background="@color/green_21d1c1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|end"
+                android:paddingRight="30px"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="28px"/>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="2px"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|start"
+                android:paddingLeft="30px"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="28px"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_money_daozhang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="60px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18px"
+            android:text="到账金额"
+            android:textColor="@color/white"
+            android:textSize="28px"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_order_record"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_below="@id/ll_top"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:text="订单记录"
+        android:textColor="@color/gray_666"
+        android:textSize="32px"/>
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_order_record"
+        android:layout_marginTop="2px">
+
+        <include layout="@layout/load_head"/>
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/pullablelistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#E0E0E0"
+            android:dividerHeight="2px"/>
+
+        <include layout="@layout/load_more"/>
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700px"
+        android:text=""
+        android:textColor="@color/black_555"
+        android:textSize="28px"/>
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.bonus.MyEarningsActivity">
+
+    <include
+        android:id="@+id/in_titleBar"
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titleBar"
+        android:layout_marginTop="1px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:layout_marginBottom="20px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="30px"
+                    android:paddingTop="25px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未结算收益"
+                        android:textColor="@color/black_333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_weijiesuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/gray_999"
+                        android:textSize="32px"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="48px"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="30px"
+                    android:paddingTop="25px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已结算收益"
+                        android:textColor="@color/black_333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_yijiesuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/gray_999"
+                        android:textSize="32px"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_weitiqu"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:drawableLeft="@drawable/ic_weitiqushouyi_zhenghe"
+                    android:drawablePadding="20px"
+                    android:gravity="center"
+                    android:text="未提取收益"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_weitiqu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:text="0.00"
+                    android:textColor="@color/gray_999"
+                    android:textSize="40px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_ketiqu"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:drawableLeft="@drawable/ic_ketiqushouyie_zhenghe"
+                    android:drawablePadding="20px"
+                    android:gravity="center"
+                    android:text="可提取收益"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_ketiqu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:text="0.00"
+                    android:textColor="@color/green_21d1c1"
+                    android:textSize="40px"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30px"
+                android:text="注：可提取收益只能整百提取"
+                android:textColor="@color/gray_666"
+                android:textSize="26px"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tv_extract"
+                style="@style/btn_green_commit"
+                android:layout_marginTop="70px"
+                android:text="提取到银行卡"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_extract_alipay"
+                style="@style/btn_green_commit"
+                android:background="@drawable/bg_btn_green_biankuang_4dp"
+                android:textColor="@color/green_21d1c1"
+                android:layout_marginTop="40px"
+                android:text="提取到支付宝"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_extract_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50px"
+        android:padding="10px"
+        android:text="提取记录"
+        android:textColor="@color/gray_999"
+        android:textSize="32px"
+        android:visibility="visible"/>
+
+</RelativeLayout>

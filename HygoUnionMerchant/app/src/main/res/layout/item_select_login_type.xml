@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="204px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/bg_btn_white_4dp">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="124px"
+            android:layout_height="124px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            app:layout_auto_baseheight="width"/>
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="18px"
+            android:layout_height="30px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:src="@drawable/ic_arrow_right"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_toLeftOf="@id/iv_right"
+            android:layout_toRightOf="@id/iv_left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black_333"
+                android:textSize="34px"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/gray_999"
+                android:textSize="28px"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

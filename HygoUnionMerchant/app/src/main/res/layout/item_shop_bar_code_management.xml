@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="187px"
+        android:background="@drawable/bg_btn_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:layout_marginTop="20px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="27px"
+                android:layout_height="27px"
+                android:layout_marginLeft="30px"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_tiaoxingma"
+                app:layout_auto_baseheight="width"/>
+
+            <TextView
+                android:id="@+id/tv_bar_code_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/black_333"
+                android:textSize="34px"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_commodity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="15px"
+            android:ellipsize="end"
+            android:lineSpacingExtra="10px"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/gray_666"
+            android:textSize="28px"/>
+    </LinearLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

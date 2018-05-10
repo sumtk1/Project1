@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.message.OrderMessageDetailActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv_layout_shop_supermarket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="订单总金额"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_total_money"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="购买商品总数"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_total_amount"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="购买人"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_purchase_person"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="支付方式"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_pay_type"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="购买时间"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_purchase_time"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="订单号"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_supermarket_order_num"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="该订单明细"
+                android:textColor="@color/black_333"
+                android:textSize="26px"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_layout_other"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_top_travel"
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_image_travel"
+                    android:layout_width="160px"
+                    android:layout_height="160px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:id="@+id/tv_title_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="26px"
+                    android:layout_toRightOf="@id/iv_image_travel"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_2e3033"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_travel"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_travel"
+                    android:text="价格"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_money_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_01"
+                    android:layout_marginLeft="18px"
+                    android:layout_toRightOf="@id/tv_01"
+                    android:text="￥"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_price_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_travel"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="10px"
+                    android:layout_toRightOf="@id/tv_money_symbol"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="36px"/>
+
+                <TextView
+                    android:id="@+id/tv_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_01"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_travel"
+                    android:text="出发地"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_place_of_departure_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_01"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/tv_02"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="28px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_bottom_travel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人姓名"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_contacts_name"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人手机号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_contacts_phone_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="证件类型"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_certification_type"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="证件号码"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_certification_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="购买时间"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_purchase_time"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="订单号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_travel_order_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_top_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_image_hotel"
+                    android:layout_width="160px"
+                    android:layout_height="160px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:id="@+id/tv_title_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="26px"
+                    android:layout_toRightOf="@id/iv_image_hotel"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_2e3033"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hotel_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_hotel"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_hotel"
+                    android:text="单价"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_money_symbol_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_hotel_01"
+                    android:layout_marginLeft="18px"
+                    android:layout_toRightOf="@id/tv_hotel_01"
+                    android:text="￥"
+                    android:textColor="@color/gray_666"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_unit_price_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_hotel"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/tv_money_symbol_hotel"
+                    android:ellipsize="end"
+                    android:maxWidth="220px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_hotel_01"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="30px"
+                    android:layout_toRightOf="@id/tv_unit_price_hotel"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_hotel_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hotel_01"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_hotel"
+                    android:text="总价"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_money_symbol_hotel_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_hotel_02"
+                    android:layout_marginLeft="18px"
+                    android:layout_toRightOf="@id/tv_hotel_02"
+                    android:text="￥"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_total_price_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hotel_01"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="10px"
+                    android:layout_toRightOf="@id/tv_money_symbol_hotel_02"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="36px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_bottom_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="入住时间"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_check_in_time"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人姓名"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_contacts_name"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人手机号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_contacts_phone_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="购买时间"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_purchase_time"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="订单号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_order_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_top_service"
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_image_service"
+                    android:layout_width="160px"
+                    android:layout_height="160px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:id="@+id/tv_title_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="26px"
+                    android:layout_toRightOf="@id/iv_image_service"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_2e3033"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_service_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_service"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_service"
+                    android:text="单价"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_money_symbol_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_service_01"
+                    android:layout_marginLeft="18px"
+                    android:layout_toRightOf="@id/tv_service_01"
+                    android:text="￥"
+                    android:textColor="@color/gray_666"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_unit_price_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_service"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/tv_money_symbol_service"
+                    android:ellipsize="end"
+                    android:maxWidth="220px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/tv_service_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_service_01"
+                    android:layout_marginLeft="15px"
+                    android:layout_toRightOf="@id/tv_unit_price_service"
+                    android:text="数量"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_service_01"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="30px"
+                    android:layout_toRightOf="@id/tv_service_02"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_service_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_service_01"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@id/iv_image_service"
+                    android:text="总价"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_money_symbol_service_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_service_03"
+                    android:layout_marginLeft="18px"
+                    android:layout_toRightOf="@id/tv_service_03"
+                    android:text="￥"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_total_price_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_service_01"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="10px"
+                    android:layout_toRightOf="@id/tv_money_symbol_service_02"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="36px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_bottom_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人姓名"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_service_contacts_name"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="联系人手机号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_service_contacts_phone_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="购买时间"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_service_purchase_time"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:text="订单号"
+                        android:textColor="@color/gray_666"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_service_order_num"
+                        style="@style/textview_base_left"
+                        android:layout_marginLeft="260px"
+                        android:layout_marginRight="30px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

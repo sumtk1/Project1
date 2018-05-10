@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/gray_e0e0e0"/>
+
+        <TextView
+            style="@style/textview_base_left"
+            android:layout_marginLeft="15dp"
+            android:text="提取积分"
+            android:textColor="@color/gray_666"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/et_extract_bonus"
+            style="@style/edittext_base"
+            android:layout_marginLeft="95dp"
+            android:hint="请输入整百数值"
+            android:inputType="number"
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_b4b4b4"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/gray_e0e0e0"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            style="@style/textview_base_left"
+            android:layout_marginLeft="15dp"
+            android:text="支付密码"
+            android:textColor="@color/gray_666"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/et_pay_pwd"
+            style="@style/edittext_base"
+            android:layout_marginLeft="95dp"
+            android:hint="请输入支付密码"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_b4b4b4"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/gray_e0e0e0"/>
+    </RelativeLayout>
+
+</LinearLayout>

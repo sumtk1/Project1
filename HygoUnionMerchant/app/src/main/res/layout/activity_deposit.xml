@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.deposit.DepositActivity">
+
+    <include
+        android:id="@+id/in_titleBar"
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_go_to_pay"
+        android:layout_below="@id/in_titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="420px"
+                android:layout_below="@id/in_titleBar"
+                android:background="@color/blue_449ffb">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bg_baozhengjin"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_message_uncomplete"
+                    android:layout_width="360px"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="60px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="80px"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_pay_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_warm_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="55px"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="52px"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_message_complete"
+                    android:layout_width="360px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="42px"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_top"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:minHeight="90px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:text=""
+                android:textColor="@color/blue_449ffb"
+                android:textSize="26px"
+                android:visibility="gone"/>
+
+            <com.gloiot.hygounionmerchant.widget.ListViewForScrollView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_remind"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="20px"
+                android:divider="@null"/>
+
+            <TextView
+                android:id="@+id/tv_pay_records"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_view"
+                android:layout_gravity="center_horizontal"
+                android:padding="30px"
+                android:text="缴纳记录"
+                android:textColor="@color/gray_999"
+                android:textSize="30px"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_go_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_green"
+        android:gravity="center"
+        android:text="缴纳信誉保证金"
+        android:textColor="@color/white"
+        android:textSize="34px"
+        android:visibility="gone"/>
+
+</RelativeLayout>

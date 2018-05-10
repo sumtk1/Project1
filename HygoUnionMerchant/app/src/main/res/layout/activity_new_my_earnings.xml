@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.bonus.NewMyEarningsActivity">
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/load_head"/>
+
+        <com.zyd.wlwsdk.widge.MyScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="580px"
+                    android:background="@drawable/star_bg"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/view_status_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="45px"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/in_titlebar"
+                        android:layout_width="match_parent"
+                        android:layout_height="88px"
+                        android:background="@color/green_21d1c1">
+
+                        <ImageView
+                            android:id="@+id/iv_toptitle_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="30px"
+                            android:src="@drawable/fanhuibai"/>
+
+                        <TextView
+                            android:id="@+id/tv_toptitle_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="36px"/>
+
+                        <TextView
+                            android:id="@+id/tv_toptitle_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30px"
+                            android:gravity="center"
+                            android:text=" "
+                            android:textColor="@color/white"
+                            android:textSize="32px"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="45px"
+                        android:text="可提取收益"
+                        android:textColor="@color/white"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_ketiqu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="20px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="80px"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:layout_marginTop="100px"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="总收益"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                            <TextView
+                                android:id="@+id/tv_zongshouyi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22px"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="30px"
+                            android:layout_gravity="center"
+                            android:background="@color/white"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="未结算收益"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                            <TextView
+                                android:id="@+id/tv_weijiesuan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22px"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="30px"
+                            android:layout_gravity="center"
+                            android:background="@color/white"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已结算收益"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                            <TextView
+                                android:id="@+id/tv_yijiesuan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22px"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/white"
+                                android:textSize="28px"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_extract_to_bankcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:background="@drawable/bg_btn_white"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:src="@drawable/ic_tiqudaoyinghangka"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100px"
+                        android:text="提取到银行卡"
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                    <ImageView
+                        style="@style/imageview_right"
+                        android:src="@drawable/ic_arrow_right"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_e5e5e5"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_extract_to_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:background="@drawable/bg_btn_white"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:src="@drawable/ic_tiqudaozhifubao"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100px"
+                        android:text="提取到支付宝"
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                    <ImageView
+                        style="@style/imageview_right"
+                        android:src="@drawable/ic_arrow_right"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_e5e5e5"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:background="@drawable/bg_btn_white"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:src="@drawable/ic_jiaonabaozhengjin_green"/>
+
+                    <TextView
+                        style="@style/textview_base_left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100px"
+                        android:text="缴纳信誉保证金"
+                        android:textColor="@color/black_333"
+                        android:textSize="32px"/>
+
+                    <ImageView
+                        style="@style/imageview_right"
+                        android:src="@drawable/ic_arrow_right"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_earnings_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:layout_marginBottom="1px"
+                    android:layout_marginTop="20px"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:text="可提取收益记录"
+                        android:textColor="@color/gray_999"
+                        android:textSize="30px"/>
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"/>
+
+            </LinearLayout>
+
+        </com.zyd.wlwsdk.widge.MyScrollView>
+
+        <include layout="@layout/load_more"/>
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_status_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:background="@color/green_21d1c1"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_earnings_records1"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="可提取收益记录"
+                android:textColor="@color/gray_999"
+                android:textSize="30px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_e5e5e5"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoFrameLayout>

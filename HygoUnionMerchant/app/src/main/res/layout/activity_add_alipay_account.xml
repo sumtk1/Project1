@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.alipay.AddAlipayAccountActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="72px"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:text="支付宝信息"
+        android:textColor="@color/gray_666"
+        android:textSize="26px"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/textview_base_left"
+            android:text="姓名"
+            android:textColor="@color/gray_666"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_alipay_name"
+            style="@style/textview_base_left"
+            android:layout_marginLeft="230px"
+            android:layout_marginRight="30px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/gray_e5e5e5"/>
+
+        <TextView
+            style="@style/textview_base_left"
+            android:text="支付宝账号"
+            android:textColor="@color/gray_666"
+            android:textSize="32px"/>
+
+        <EditText
+            android:id="@+id/et_alipay_account"
+            style="@style/edittext_base"
+            android:layout_marginLeft="230px"
+            android:layout_marginRight="30px"
+            android:hint="请输入绑定该姓名的支付宝账号"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_ccc"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/btn_green_pre"
+        android:layout_marginTop="90px"
+        android:text="确认"/>
+
+</LinearLayout>

@@ -1,0 +1,311 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+<p>
+    <xmp id="init">
+    </xmp>
+</p>
+<p>
+    <input type="text" id="text1" value="用户名(username)"/>
+</p>
+<p>
+    <input type="text" id="text2" value="password"/>
+</p>
+<p>
+    <input type="button" id="enter" value="closeweb" onclick="closeweb();"
+    />
+    <button onclick="pay();">测试aa</button>
+</p>
+<p>
+    <input type="button" id="enter1" value="unablegoback" onclick="unablegoback();"
+    />
+<p>
+    <input type="button" id="enter6" value="通讯录" onclick="addressBook();"
+    />
+<p>
+    <input type="button" id="enter3" value="相册" onclick="getphoto();"
+    />
+<p>
+    <input type="button" id="enter4" value="商品详情" onclick="shopinfo();"
+    />
+    <input type="button" id="enter13" value="打开webview" onclick="webview();"
+    />
+    <input type="button" id="enter15" value="标题" onclick="title11();"
+    />
+<p>
+    <input type="button" id="enter5" value="登录页" onclick="login();"
+    />
+    <input type="button" id="enter10" value="视频播放器" onclick="video();"
+    />
+    <input type="button" id="enter11" value="支付宝支付" onclick="alipay();"
+    />
+    <input type="button" id="enter14" value="pageType" onclick="pageType();"
+    />
+<p>
+    <input type="text" id="enter12" value=""/>
+<p>
+</p>
+<p>
+    <input type="button" id="enter2" value="显示html" onclick="zyksdk.toast('111111111')"/>
+
+    <button onclick="location='www.baidu.com'">测试</button>
+</p>
+<p>
+    <input type="file" value="打开文件" onclick="abc();"/>
+</p>
+
+<div id="bbbbb" style="color:red;"></div>
+</body>
+
+<script>
+
+
+	document.getElementById("bbbbb").innerHTML = '1';
+
+    function bb(){
+    var data = {};
+        data.key = 'keyppppp';
+        data.value = 'valueppppp';
+        zykjssdk.getData(data,function(data){
+             document.getElementById("bbbbb").innerHTML = data;
+        });
+    }
+
+    function bbb(){
+        var data = {};
+        data.key = 'keyppppp';
+        data.value = 'valueppppp';
+
+        zyksdk.pay(data,function(data2){
+             document.getElementById("bbbbb").innerHTML = data2;
+        });
+
+        zyksdk.unionpay(data);
+    }
+
+    function pp(){
+
+        var data = {};
+        data.key = 'keyppppp';
+        data.value = 'valueppppp';
+        zykjssdk.WXPay(data,function(data){
+             document.getElementById("show").innerHTML = JSON.stringify(data);
+        });
+    }
+
+    //收银台
+        function pay() {
+            p_golbal.pay({
+                appid: "d678efh567hg6787",  //公众账号id
+                mch_id: "1230000109",       //商户号
+                body:"积分充值",             //订单标题
+                sign: "C380BEC2BFD727A4B6845133519F3AD6",    //签名
+                prepay_id: "20150806125346",     //预支付订单id
+                detail: "充值100送100",     //展示商品详情
+                total_fee: "100",                     //展示支付金额
+                type: ["支付宝","微信支付","银联支付","红利支付"],   //收银台显示多种支付方式
+                success: function (res) {
+                    // 验证订单是否创建成功
+                    alert(res);
+                }
+            });
+
+        }
+
+
+        function closeweb(){
+            p_golbal.func({
+                type: "closeweb",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+
+
+        function unablegoback(){
+            p_golbal.func({
+                type: "unablegoback",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function addressBook(){
+            p_golbal.func({
+                type: "addressBook",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+
+        function getphoto(){
+            p_golbal.func({
+                type: "getphoto",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function getcode(){
+            p_golbal.func({
+                type: "getcode",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function shopinfo(){
+            p_golbal.func({
+                type: "shopinfo",
+                shopid:"1209",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+
+        function login(){
+            p_golbal.func({
+                type: "login",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function video(){
+            p_golbal.func({
+                type: "video",
+                url: "http://192.168.0.207:4000/useCourse/video/khShopping.mp4",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function title11(){
+            p_golbal.func({
+                type: "title",
+                title: "网页标题123123123",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function alipay(){
+            p_golbal.pay({
+                    pay_type:"alipay",
+                    return_info:"service%3D%22mobile.securitypay.pay%22%26partner%3D%222088521599218220%22%26_input_charset%3D%22UTF-8%22%26body%3D%22b02fa30bd32db42b328fd7c92ed49b4e0993e7083ebe3d8ee1a72b96d778b96b%22%26out_trade_no%3D%22123000010926000000000403%22%26payment_type%3D%221%22%26seller_id%3D%22link%40abcaaa.top%22%26subject%3D%22%E5%85%85%E5%80%BC%22%26total_fee%3D%2210.00%22%26it_b_pay%3D%221d%22%26notify_url%3D%22http%253A%252F%252F183.239.170.178%253A7008%252Freturn_alipay.xhtml%22%26show_url%3D%22http%253A%252F%252F183.239.170.178%253A7008%252Freturn_alipay.xhtml%22%26sign%3D%22RYX5CeTkgI0fHtVzFkTm1Ba%252FckV%252FzWBI9qiN05iSGUadxWYyAwQyH0EMMZU9uy2ldJgcAbum093U82Sa4w%252FdUWqJj8Q%252FoAmykFROZs64WKmLw0Z%252BihH%252Bg9CQkHbsvOZVTYfXt%252BK%252FmYzsEcKQAlzB3CwnL%252BgdDpSMARqOYD8%252BdMIHr93lTEELq6pP%252BVqxVJHqkVu6R8qjuH%252FgWrLNBYprkxH1A1ZzpntkZ30IS%252BgwGcOioXJJ8Lr%252F9tq8Meja%252FwHNj81Z0IquMaas6KF1smaZDQ5tnEglGLpNe2Pt1F42555zXs3fJx3AZxrMow%252FY6OGqv3w8HgpHA1URm3yRm3rtbA%253D%253D%22%26sign_type%3D%22RSA%22",
+                    success: function (res) {
+    //              	alert(res+"测试支付宝回调")
+                        res = JSON.parse(res);
+                        if(res.状态  == "成功"){
+                            window.location.href = "finish.xhtml?onlyID="+_this.dataParam.onlyID;
+                        }
+                    }
+                });
+          }
+
+
+        function webview(){
+            p_golbal.func({
+                type: "webview",
+                url: "http://192.168.0.147:8080/Explain/shopindex.xhtml",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+
+        function pageType(){
+            p_golbal.func({
+                type: "PageType",
+                page: "pay",
+                time: "6",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+        function  closeWin() {
+               alert('closeWin');
+        }
+
+        function gobackweb(){
+            p_golbal.func({
+                type: "gobackweb",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function dialog(){
+            p_golbal.func({
+                type: "dialog",
+                title: "标题",
+                content: "对话框的内容",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        function appversion(){
+            p_golbal.func({
+                type: "appVersion",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+<!--跳转商品详情-->
+<!--shopinfo-->
+<!--参数：shopid 商品id-->
+<!--返回数据：无-->
+
+<!--跳转登录页-->
+<!--login-->
+<!--参数：无-->
+<!--返回数据：-->
+<!--{"状态":"成功","onlyid":"123123123123123123"}-->
+<!--{"状态":"失败"}-->
+
+<!--选取手机图片-->
+<!--getphoto-->
+<!--参数：无-->
+<!--返回数据：-->
+<!--{"状态":"成功","地址":"http：123123/123123.png"}-->
+<!--{"状态":"失败"}-->
+
+<!--视频播放器-->
+<!--video-->
+<!--参数：url 视频地址-->
+<!--返回数据：无-->
+
+
+
+</script>
+
+</html>

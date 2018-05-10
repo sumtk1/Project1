@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">环游购异业商户版</string>
+
+    <string name="setting">设置</string>
+    <string name="perm_tip">当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需权限。\n最后点击两次后退按钮，即可返回。</string>
+    <string name="cancel">取消</string>
+
+
+    <string name="camera">请给予相机权限，才能正常使用扫一扫</string>
+    <string name="camera_updatepics">请给予相机权限，才能正常上传图片</string>
+    <string name="location">请给予定位权限，才能使用定位功能</string>
+
+    <string name="perm_camera">请获取相机权限</string>
+    <string name="perm_phoneinfo">请获取手机信息权限</string>
+    <string name="perm_recordaudio">请获取语音权限</string>
+    <string name="perm_WRITE_EXTERNAL_STORAGE">请设置读取存储卡权限</string>
+    <string name="perm_VIBRATE">请设置手机振动权限</string>
+
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+                                              android:background="@color/bg_color">
+
+    <LinearLayout
+        android:id="@+id/ll_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="260px"
+            android:layout_marginTop="230px"
+            android:src="@drawable/ic_no_product"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="暂时没有相关商品"
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hava"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/list_view_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none">
+        </ListView>
+
+        <ListView
+            android:id="@+id/list_view_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:scrollbars="none">
+        </ListView>
+    </LinearLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

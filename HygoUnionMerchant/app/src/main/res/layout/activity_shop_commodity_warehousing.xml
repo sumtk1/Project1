@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.home.shop.ShopCommodityWarehousingActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="260px"
+            android:layout_marginTop="230px"
+            android:src="@drawable/ic_meiyoutianjaitiaoma"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="您还没有添加过该条码，请添加后再操作"
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_have"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_confirm">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="30px">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="400px"
+                    android:layout_height="400px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30px"
+                    android:background="@drawable/ic_shangchuantup"
+                    app:layout_auto_baseheight="width"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pic"
+                    android:layout_marginTop="30px"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="96px"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="商品条形码"/>
+
+                        <TextView
+                            android:id="@+id/tv_goods_bar_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="220px"
+                            android:layout_marginRight="30px"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:text=""
+                            android:textColor="@color/black_555"
+                            android:textColorHint="@color/gray_bbb"
+                            android:textSize="30px"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="96px"
+                        android:layout_marginTop="20px"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="商品分类"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_select_classify"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="220px"
+                            android:layout_marginRight="30px">
+
+                            <TextView
+                                android:id="@+id/tv_small_classify"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:ellipsize="end"
+                                android:gravity="center|right"
+                                android:maxWidth="250px"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/gray_666"
+                                android:textColorHint="@color/gray_bbb"
+                                android:textSize="32px"/>
+
+                            <TextView
+                                android:id="@+id/tv_big_classify"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="20px"
+                                android:layout_toLeftOf="@id/tv_small_classify"
+                                android:ellipsize="end"
+                                android:gravity="center|right"
+                                android:hint=""
+                                android:maxWidth="300px"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black_333"
+                                android:textColorHint="@color/gray_bbb"
+                                android:textSize="32px"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/line_horizontal"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginRight="30px"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:minHeight="96px">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="商品名称"/>
+
+                        <TextView
+                            android:id="@+id/tv_goods_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="220px"
+                            android:layout_marginRight="30px"
+                            android:ellipsize="end"
+                            android:hint=""
+                            android:lineSpacingExtra="6px"
+                            android:maxLines="4"
+                            android:text=""
+                            android:textColor="@color/black_555"
+                            android:textColorHint="@color/gray_bbb"
+                            android:textSize="30px"/>
+
+                        <View
+                            style="@style/line_horizontal"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginRight="30px"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_relativelayout_96"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="市场价"/>
+
+                        <TextView
+                            android:id="@+id/tv_addoils_unit"
+                            style="@style/text_right_28"
+                            android:text="元"
+                            android:textColor="@color/blue_3192f6"
+                            android:textSize="30px"/>
+
+                        <TextView
+                            android:id="@+id/tv_market_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="160px"
+                            android:layout_toLeftOf="@id/tv_addoils_unit"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:textColor="@color/black_555"
+                            android:textColorHint="@color/gray_bbb"
+                            android:textSize="30px"/>
+
+                        <View
+                            style="@style/line_horizontal"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginRight="30px"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_relativelayout_96"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="供货价"/>
+
+                        <TextView
+                            android:id="@+id/tv_addoils_unit1"
+                            style="@style/text_right_28"
+                            android:text="元"
+                            android:textColor="@color/blue_3192f6"
+                            android:textSize="30px"/>
+
+                        <TextView
+                            android:id="@+id/tv_supply_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="160px"
+                            android:layout_toLeftOf="@id/tv_addoils_unit1"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:textColor="@color/black_555"
+                            android:textColorHint="@color/gray_bbb"
+                            android:textSize="30px"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_relativelayout_96"
+                        android:layout_marginTop="20px"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="进货价"/>
+
+                        <TextView
+                            android:id="@+id/tv_addoils_unit2"
+                            style="@style/text_right_28"
+                            android:text="元"
+                            android:textColor="@color/blue_3192f6"
+                            android:textSize="30px"/>
+
+                        <EditText
+                            android:id="@+id/et_purchase_price"
+                            style="@style/edit_hint"
+                            android:layout_marginLeft="160px"
+                            android:layout_toLeftOf="@id/tv_addoils_unit2"
+                            android:gravity="center"
+                            android:hint="请输入当前商品进货价"
+                            android:inputType="number|numberDecimal"
+                            android:text=""/>
+
+                        <View
+                            style="@style/line_horizontal"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginRight="30px"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_relativelayout_96"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/black555_pint_16"
+                            android:text="数量"/>
+
+                        <EditText
+                            android:id="@+id/et_amonut"
+                            style="@style/edit_hint"
+                            android:layout_marginLeft="160px"
+                            android:layout_marginRight="54px"
+                            android:gravity="center"
+                            android:hint="请输入商品数量"
+                            android:inputType="number"
+                            android:maxLength="8"
+                            android:text=""/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

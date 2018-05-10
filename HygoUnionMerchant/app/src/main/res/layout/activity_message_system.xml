@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_titlebar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="224px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300px"
+            android:src="@drawable/ic_no_message"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:text="暂无系统消息"
+            android:textColor="@color/gray_666"
+            android:textSize="32px"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_system_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_titlebar"
+        android:paddingBottom="24px"/>
+</RelativeLayout>

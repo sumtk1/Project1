@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.zizhirenzheng.CertificationActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_confirm"
+        android:layout_below="@id/in_titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="30px"
+                android:text="        为了您的资金安全，请上传负责人、法人和银行卡持卡人信息时保证信息的一致和真实有效，如负责人和法人不一致，请上传授权书或委托证明书。如因资质信息不真实有效造成无法提现和资金风险，由小铺法人与负责人承担完全法律责任。"
+                android:textColor="@color/gray_666"
+                android:textSize="28px"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="负责人信息"
+                android:textColor="@color/gray_666"
+                android:textSize="26px"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="姓名"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_principal_name"
+                    style="@style/edittext_base"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:hint="请输入负责人姓名"
+                    android:textColor="@color/black_333"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="身份证号码"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_principal_id_num"
+                    style="@style/edittext_base"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:digits="0123456789xX"
+                    android:hint="请输入负责人身份证号码"
+                    android:maxLength="18"
+                    android:textColor="@color/black_333"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_principal_front"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="身份证正面"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_principal_front"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="负责人身份证正面照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_principal_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_principal_back"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="身份证反面"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_principal_back"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="负责人身份证反面照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_principal_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_principal_shouchi"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="手持身份证"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_principal_shouchi"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="请上传手持身份证照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_principal_shouchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="执照许可证"
+                android:textColor="@color/gray_666"
+                android:textSize="26px"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_business_license"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="营业执照照片"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_business_license"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="请上传营业执照照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_business_license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_industry_licence"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="行业许可证"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_industry_licence"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="请上传行业许可证（非必填）"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_industry_licence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="法人信息"
+                android:textColor="@color/gray_666"
+                android:textSize="26px"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_legal_person_front"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="身份证正面"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_legal_person_front"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="法人身份证正面照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_legal_person_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_legal_person_back"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="身份证反面"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_legal_person_back"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="法人身份证反面照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_legal_person_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_legal_person_shouchi"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/bg_btn_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="*"
+                    android:textColor="@color/red_ff7676"
+                    android:textSize="32px"/>
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="50px"
+                    android:text="手持身份证"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_hint_legal_person_shouchi"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="260px"
+                    android:layout_marginRight="30px"
+                    android:text="法人手持身份证照片"
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textColorHint="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_state_legal_person_shouchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65px"
+                    android:text=""
+                    android:textColor="@color/gray_b4b4b4"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_green"
+        android:gravity="center"
+        android:text="提交审核"
+        android:textColor="@color/white"
+        android:textSize="34px"/>
+
+</RelativeLayout>

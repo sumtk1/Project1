@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.gloiot.hygounionmerchant">
+
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 导入zxing需要的额外权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- 地图包、搜索包需要的基础权限 -->
+
+
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <!-- 蓝牙打印所需的蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- Bugly -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+    <application
+        android:name=".ui.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+        <meta-data
+            android:name="design_width"
+            android:value="720"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1280"/>
+
+        <!-- 设置高德地图key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1913743f9420d1dcd2301141eccfcd1d"/>
+
+        <!-- 声明定位service -->
+        <service android:name="com.amap.api.location.APSService">
+        </service>
+
+        <activity
+            android:name=".ui.activity.login.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.login.SelectLoginTypeActivity">
+        </activity>
+        <activity android:name=".ui.activity.login.LoginActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.login.GuideActivity">
+        </activity>
+        <activity android:name=".ui.activity.login.ForgetPwd1Activity">
+        </activity>
+        <activity android:name=".ui.activity.login.ForgetPwd2Activity">
+        </activity>
+        <activity android:name=".ui.activity.mine.password.SetPayPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.test.TestTimeButtonActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.ShopProductManagementActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.ShopCommodityInfoActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopBarCodeManagementActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopCommodityWarehousingActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopWarehousingManagementActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopMyCommodityForOldMarketUserActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.home.shop.ShopCommodityWarehousingForOldMarketUserActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopScanBarCodeActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.home.shop.ShopAddBarCodeActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".ui.activity.home.shop.ShopAddGoodsActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".ui.activity.home.shop.ShopModifyGoodsActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.ShopMyGoodsActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.home.shop.EditBarCodeActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.shop.SoldOutRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.TodayEarningActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.SettlementActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.SettlementOverallActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.SettlementDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.StatisticsActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.ShopIncomeDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.travelandhotel.TravelAndHotelIncomeDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.accountinfo.MyAccountInfoActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.ExtractBonusActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.setting.AccountSecurityActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.setting.SettingActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.password.ModifyPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.setting.AboutActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.BindingHygoAccountActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.ExtractDetailActivity">
+        </activity>
+        <activity android:name=".ui.webview.BaseWebviewActivity">
+        </activity>
+        <activity android:name=".ui.webview.CommonWebActivity">
+        </activity>
+        <activity android:name=".ui.webview.WebActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.shop.ShopOrderDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.test.TestToolbarActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.printer.MyPrinterActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.printer.AddPrinterActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.printer.EditPrinterActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.SuggestionFeedbackActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.accountinfo.EditAccountInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.test.GetLocationActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.accountinfo.MapLatLngActivity">
+        </activity>
+        <activity android:name=".ui.activity.login.ForgetLoginPwd1Activity">
+        </activity>
+        <activity android:name=".ui.activity.login.ForgetLoginPwd2Activity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.zizhirenzheng.CertificationActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.mine.zizhirenzheng.UploadingSinglePhotoActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.zizhirenzheng.UploadingIndustryLicenceActivity">
+        </activity>
+        <activity android:name=".ui.activity.message.SystemMessageActivity"/>
+        <activity android:name=".ui.activity.message.SystemXiangQingActivity"/>
+        <activity android:name=".ui.activity.mine.bankcard.MyBankCardActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.bankcard.AddBankCardActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.mine.zizhirenzheng.CertificateFinishActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.MyEarningsActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.SelectBankcardActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.bonus.ExtractToBankcardActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.ExtractFinishActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.ExtractRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.ExtractRecordDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.income.travelandhotel.TravelAndHotelStatisticsActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.InputCodeAuthenticationActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.OfflineGatheringRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.AuthenticationRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.OfflineGatheringRecordDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.SearchAuthenticationRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.home.NewSearchAuthenticationRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.message.OrderMessageDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.message.ProductMessageDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.alipay.MyAliPayActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.alipay.AddAlipayAccountActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.NewMyEarningsActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.deposit.DepositActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.mine.deposit.PayDepositActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.mine.deposit.PayDepositSuccessActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.deposit.PayDepositRecordsActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.deposit.PayDepositDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.mine.bonus.NewExtractRecordDetailActivity">
+        </activity>
+        <activity android:name=".ui.activity.message.BillsMessageActivity">
+        </activity>
+    </application>
+
+</manifest>

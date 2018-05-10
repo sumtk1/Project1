@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.password.SetPayPwdActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_01"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="30px">
+
+        <EditText
+            android:id="@+id/et_pay_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请设置支付密码（6位数字）"
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_ccc"
+            android:textSize="30px"/>
+
+        <View
+            style="@style/line_horizontal"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_02"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/rl_01"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="30px">
+
+        <EditText
+            android:id="@+id/et_pay_pwd_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="再次填写以确认"
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_ccc"
+            android:textSize="30px"/>
+
+        <View
+            style="@style/line_horizontal"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/btn_green_pre"
+        android:layout_below="@id/rl_02"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="60px"
+        android:text="确 认"/>
+
+</RelativeLayout>

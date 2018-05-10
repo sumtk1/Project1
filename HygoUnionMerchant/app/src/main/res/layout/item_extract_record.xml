@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@drawable/bg_btn_white">
+
+        <TextView
+            android:id="@+id/tv_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_extract_state"
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/tv_account_name"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account_name"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="25px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/gray_999"
+            android:textSize="24px"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/imageview_right"
+            android:src="@drawable/ic_arrow_right"/>
+
+        <TextView
+            android:id="@+id/tv_extract_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15px"
+            android:layout_toLeftOf="@id/iv_arrow"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="48px"/>
+
+    </RelativeLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

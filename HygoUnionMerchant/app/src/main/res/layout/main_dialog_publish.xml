@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeffffff"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="500px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="10px">
+
+            <LinearLayout
+                android:id="@+id/ll_tiaoma"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="80px">
+
+                <ImageView
+                    android:id="@+id/iv_tiaoma"
+                    android:layout_width="124px"
+                    android:layout_height="124px"
+                    android:src="@drawable/ic_tianjaitiaoma"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="添加条码"
+                    android:textColor="@color/gray_666"
+                    android:textSize="24px"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ruku"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="80px">
+
+                <ImageView
+                    android:id="@+id/iv_ruku"
+                    android:layout_width="124px"
+                    android:layout_height="124px"
+
+                    android:src="@drawable/ic_shangpinruku"
+                    app:layout_auto_baseheight="width"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="商品入库"
+                    android:textColor="@color/gray_666"
+                    android:textSize="24px"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/main_img_uploading"
+        android:layout_width="112px"
+        android:layout_height="112px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20px"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_fabushangping"
+        android:visibility="gone"
+        app:layout_auto_baseheight="width"/>
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42px"
+        android:padding="10px"
+        android:src="@drawable/ic_shouye_xx"/>
+
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

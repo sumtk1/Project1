@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--&lt;!&ndash; 按压时 &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/bg_btn_violet_click" android:state_pressed="true" />-->
+    <!--&lt;!&ndash; 按压离开后&ndash;&gt;-->
+    <!--<item android:drawable="@drawable/bg_btn_violet"  android:state_pressed="false"/>-->
+    <!--&lt;!&ndash; 默认时 &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/bg_btn_violet" />-->
+    <!--&lt;!&ndash;不可点击&ndash;&gt;-->
+    <!--<item android:drawable="@drawable/bg_no_but_fillet" android:state_enabled="false" />-->
+
+
+    <item android:state_pressed="true" android:drawable="@drawable/bg_btn_violet_click" />
+    <item android:state_enabled="false" android:drawable="@drawable/bg_no_but_fillet" />
+    <item android:drawable="@drawable/bg_btn_violet" />
+
+
+</selector>

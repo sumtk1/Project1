@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.zyd.wlwsdk.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="消息"
+            android:textColor="@color/black_333"
+            android:textSize="36px" />
+
+        <Button
+            android:id="@+id/tv_message_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="添加一条消息"
+            android:textColor="@color/black_333"
+            android:textSize="36px"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_ccc" />
+    </com.zyd.wlwsdk.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message_network"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:background="#F0A1AD"
+        android:gravity="center_vertical"
+        android:text="   当前网络不可用，请检查当前网络"
+        android:textColor="@color/white"
+        android:textSize="28px"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="380px"
+            android:layout_height="224px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300px"
+            android:src="@drawable/ic_no_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:text="暂时没有消息哦"
+            android:textColor="@color/gray_666"
+            android:textSize="32px" />
+    </LinearLayout>
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/recycler_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:visibility="visible" />
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

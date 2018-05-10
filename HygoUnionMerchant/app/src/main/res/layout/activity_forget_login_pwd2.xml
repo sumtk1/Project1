@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.login.ForgetLoginPwd2Activity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="30px">
+
+        <EditText
+            android:id="@+id/et_new_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:singleLine="true"
+            android:textColor="@color/black_333"
+            android:textColorHint="@color/gray_ccc"
+            android:textSize="30px"/>
+
+        <View
+            style="@style/line_horizontal"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/btn_green_pre"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="80px"
+        android:text="确认"/>
+
+</LinearLayout>

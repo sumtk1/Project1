@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.home.OfflineGatheringRecordActivity">
+
+    <include
+        android:id="@+id/in_titleBar"
+        layout="@layout/include_titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_below="@id/in_titleBar"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/blue_449ffb"
+            app:tabSelectedTextColor="@color/blue_449ffb"
+            app:tabTextColor="@color/gray_666">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近"/>
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间段"/>
+
+        </android.support.design.widget.TabLayout>
+
+    </LinearLayout>
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top"
+        android:layout_marginTop="2px">
+
+        <include layout="@layout/load_head"/>
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/pullablelistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#E0E0E0"
+            android:dividerHeight="2px"/>
+
+        <include layout="@layout/load_more"/>
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600px"
+        android:text=""
+        android:textColor="@color/black_555"
+        android:textSize="28px"/>
+
+</RelativeLayout>

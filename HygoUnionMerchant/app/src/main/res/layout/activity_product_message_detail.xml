@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.message.ProductMessageDetailActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_top_supermaket"
+        android:layout_width="match_parent"
+        android:layout_height="220px"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_image_supermarket"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            app:layout_auto_baseheight="width"/>
+
+        <TextView
+            android:id="@+id/tv_title_supermarket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="25px"
+            android:layout_toRightOf="@id/iv_image_supermarket"
+            android:lineSpacingExtra="5px"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_supermarket_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_supermarket"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/iv_image_supermarket"
+            android:text="市场价"
+            android:textColor="@color/gray_999"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tv_supermarket_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_supermarket"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="32px"
+            android:layout_toRightOf="@id/tv_supermarket_01"
+            android:text="￥"
+            android:textColor="@color/blue_449ffb"
+            android:textSize="24px"/>
+
+        <TextView
+            android:id="@+id/tv_supermarket_market_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_supermarket"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@id/tv_supermarket_02"
+            android:ellipsize="end"
+            android:maxWidth="180px"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/blue_449ffb"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_supermarket_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_supermarket"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/tv_supermarket_market_price"
+            android:text="数量"
+            android:textColor="@color/gray_999"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tv_supermarket_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_supermarket"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@id/tv_supermarket_03"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/blue_449ffb"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_top_service"
+        android:layout_width="match_parent"
+        android:layout_height="220px"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_image_service"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            app:layout_auto_baseheight="width"/>
+
+        <TextView
+            android:id="@+id/tv_title_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="25px"
+            android:layout_toRightOf="@id/iv_image_service"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black_333"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_service_jianjie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_service"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="20px"
+            android:layout_toRightOf="@id/iv_image_service"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/gray_999"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tv_service_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_service_jianjie"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/iv_image_service"
+            android:text="市场价"
+            android:textColor="@color/gray_999"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tv_service_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_service_jianjie"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="32px"
+            android:layout_toRightOf="@id/tv_service_01"
+            android:text="￥"
+            android:textColor="@color/blue_449ffb"
+            android:textSize="24px"/>
+
+        <TextView
+            android:id="@+id/tv_service_market_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_service_jianjie"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@id/tv_service_02"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/blue_449ffb"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="208px">
+
+        <ImageView
+            android:id="@+id/iv_image_hotel"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            app:layout_auto_baseheight="width"/>
+
+        <TextView
+            android:id="@+id/tv_title_hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/iv_image_hotel"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="像是一根线，拽住风筝那头的童年"
+            android:textColor="@color/black_333"
+            android:textSize="30px"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_hotel"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="16px"
+            android:layout_toRightOf="@id/iv_image_hotel"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px">
+
+            <TextView
+                style="@style/textview_base_left"
+                android:text="操作"
+                android:textColor="@color/gray_666"
+                android:textSize="32px"/>
+
+            <TextView
+                android:id="@+id/tv_operation"
+                style="@style/text_right_28"
+                android:layout_marginLeft="140px"
+                android:text=""
+                android:textColor="@color/black_333"
+                android:textSize="32px"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px">
+
+            <TextView
+                style="@style/textview_base_left"
+                android:text="处理人"
+                android:textColor="@color/gray_666"
+                android:textSize="32px"/>
+
+            <TextView
+                android:id="@+id/tv_processor"
+                style="@style/text_right_28"
+                android:layout_marginLeft="140px"
+                android:text=""
+                android:textColor="@color/black_333"
+                android:textSize="32px"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px">
+
+            <TextView
+                style="@style/textview_base_left"
+                android:text="处理时间"
+                android:textColor="@color/gray_666"
+                android:textSize="32px"/>
+
+            <TextView
+                android:id="@+id/tv_process_time"
+                style="@style/text_right_28"
+                android:layout_marginLeft="140px"
+                android:text=""
+                android:textColor="@color/black_333"
+                android:textSize="32px"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

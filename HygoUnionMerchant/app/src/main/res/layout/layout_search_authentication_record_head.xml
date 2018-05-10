@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="30px"
+    android:paddingRight="30px">
+
+    <TextView
+        android:id="@+id/search_history_head"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="left|center_vertical"
+        android:text="历史搜索"
+        android:textColor="@color/gray_666"
+        android:textSize="30px"/>
+
+</LinearLayout>

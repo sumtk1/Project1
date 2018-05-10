@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gloiot.hygounionmerchant.widget.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                      android:layout_width="206px"
+                                                      android:layout_height="206px"
+                                                      app:layout_auto_basewidth="height">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@drawable/__picker_photo_bg"
+        android:padding="1dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add_photo"
+        app:layout_auto_baseheight="width"/>
+
+</com.gloiot.hygounionmerchant.widget.SquareItemLayout>

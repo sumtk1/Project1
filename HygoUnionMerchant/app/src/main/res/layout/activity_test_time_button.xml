@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.test.TestTimeButtonActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <com.gloiot.hygounionmerchant.widget.TimeButton
+        android:id="@+id/time_button"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@color/gray_f7f7f7"
+        android:gravity="center"
+        android:text="获取验证码"
+        android:textColor="@color/green_21d1c1"
+        android:textSize="32px"/>
+
+    <TextView
+        android:id="@+id/tv_reset"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@color/blue_449ffb"
+        android:gravity="center"
+        android:text="重置"
+        android:textColor="@color/white"
+        android:textSize="32px"/>
+
+</LinearLayout>

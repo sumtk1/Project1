@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.deposit.PayDepositActivity">
+
+    <include
+        android:id="@+id/in_titleBar"
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220px"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text_daijiaona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25px"
+                    android:text="待缴纳（元）"
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_daijiaona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/green_21d1c1"
+                    android:textSize="72px"/>
+
+                <TextView
+                    android:id="@+id/tv_yijiaona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_999"
+                    android:textSize="28px"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="20px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="缴纳账户"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_text_ketiqu"
+                    style="@style/textview_base_left"
+                    android:layout_marginLeft="190px"
+                    android:text="可提取收益"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_ketiqu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6px"
+                    android:layout_toRightOf="@id/tv_text_ketiqu"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/green_21d1c1"
+                    android:textSize="32px"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/gray_e5e5e5"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="缴纳金额"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_pay_money"
+                    style="@style/edittext_base"
+                    android:layout_marginLeft="190px"
+                    android:hint="请输入要缴纳的金额"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/black_333"
+                    android:textColorHint="@color/gray_999"
+                    android:textSize="32px"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_read_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:background="@drawable/checkbox_square_green"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15px"
+                    android:text="我已认真阅读并同意"
+                    android:textColor="@color/gray_666"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_notice_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《信誉保证金须知》"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="28px"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_go_to_pay"
+                style="@style/btn_green_commit"
+                android:layout_marginTop="90px"
+                android:text="去缴纳"/>
+
+            <TextView
+                android:id="@+id/tv_pay_records"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100px"
+                android:padding="20px"
+                android:text="缴纳记录"
+                android:textColor="@color/gray_999"
+                android:textSize="32px"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

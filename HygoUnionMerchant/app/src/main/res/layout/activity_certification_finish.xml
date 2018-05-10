@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.zizhirenzheng.CertificateFinishActivity">
+
+    <include
+        layout="@layout/include_titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="382px"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60px"
+            android:src="@drawable/ic_dengdaishenhe"
+            app:layout_auto_baseheight="width"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20px"
+            android:text="资质审核中"
+            android:textColor="@color/gray_666"
+            android:textSize="30px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20px"
+            android:text="预计在7个工作日内完成审核"
+            android:textColor="@color/black_333"
+            android:textSize="40px"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/base_btn_green"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="100px"
+        android:background="@drawable/bg_btn_green_21d1c1_22dp"
+        android:text="返回"/>
+
+</LinearLayout>

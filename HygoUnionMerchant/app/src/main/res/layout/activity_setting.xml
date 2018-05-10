@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.mine.setting.SettingActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_logout"
+        android:layout_below="@id/in_titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_btn_white">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="关于"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_account_security"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_btn_white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="账号与安全"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_btn_white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="意见反馈"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_check_for_updates"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_btn_white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="检测更新"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <ImageView
+                    style="@style/imageview_right"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/tv_sign_updates"
+                    android:layout_width="40dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="60px"
+                    android:background="@drawable/shape_bg_red_ff7676_9dp"
+                    android:gravity="center"
+                    android:text="new"
+                    android:textColor="@color/white"
+                    android:textSize="28px"
+                    android:visibility="gone"/>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:background="@drawable/bg_btn_white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/textview_base_left"
+                    android:text="清除缓存"
+                    android:textColor="@color/black_333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_cache_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:text=""
+                    android:textColor="@color/gray_666"
+                    android:textSize="30px"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60px"
+        android:layout_marginLeft="45px"
+        android:layout_marginRight="45px"
+        android:background="@drawable/bg_btn_red_4dp"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="34px"/>
+
+</RelativeLayout>

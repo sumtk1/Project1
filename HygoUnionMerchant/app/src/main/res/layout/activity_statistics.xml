@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygounionmerchant.ui.activity.income.shop.StatisticsActivity">
+
+    <RelativeLayout
+        android:id="@+id/in_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/green_21d1c1">
+
+        <ImageView
+            android:id="@+id/iv_toptitle_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="30px"
+            android:src="@drawable/fanhuibai"/>
+
+        <TextView
+            android:id="@+id/tv_toptitle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="36px"/>
+
+        <TextView
+            android:id="@+id/tv_toptitle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="32px"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="261px"
+                android:background="@color/green_21d1c1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_select_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80px">
+
+                    <TextView
+                        android:id="@+id/tv_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="32px"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="48px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5px"
+                        android:layout_toRightOf="@id/tv_month"
+                        android:drawableRight="@drawable/ic_xuanzeyuefen"
+                        android:text="月"
+                        android:textColor="@color/white"
+                        android:textSize="30px"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_total_earning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxWidth="520px"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="72px"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_total_earning"
+                        android:layout_toRightOf="@id/tv_total_earning"
+                        android:drawablePadding="8px"
+                        android:drawableRight="@drawable/ic_right_white"
+                        android:gravity="center"
+                        android:paddingBottom="12px"
+                        android:paddingLeft="20px"
+                        android:paddingRight="20px"
+                        android:paddingTop="20px"
+                        android:text="明细"
+                        android:textColor="@color/white"
+                        android:textSize="28px"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_switcher_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16px"
+                    android:drawablePadding="5px"
+                    android:drawableRight="@drawable/ic_qiehuanjine"
+                    android:padding="10px"
+                    android:text="本月到账金额（元）"
+                    android:textColor="@color/white"
+                    android:textSize="28px"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_switcher_total_fuwu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16px"
+                    android:drawablePadding="5px"
+
+                    android:padding="10px"
+                    android:text="本月到账金额（元）"
+                    android:textColor="@color/white"
+                    android:textSize="28px"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tl_tabs"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/blue_449ffb"
+                    app:tabSelectedTextColor="@color/blue_449ffb"
+                    app:tabTextColor="@color/gray_666">
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昨天"/>
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="七天"/>
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30天"/>
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="时间段"/>
+
+                </android.support.design.widget.TabLayout>
+
+                <TextView
+                    android:id="@+id/tv_period"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_white"
+                    android:drawablePadding="-30px"
+                    android:drawableRight="@drawable/shijianduan_xiala"
+                    android:gravity="center"
+                    android:paddingRight="30px"
+                    android:text="时间段"
+                    android:textColor="@color/gray_666"
+                    android:textSize="30px"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_shop_earning"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="2px"
+                android:background="@drawable/bg_btn_white">
+
+                <TextView
+                    android:id="@+id/tv_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:drawableLeft="@drawable/ic_jiayoushouyi"
+                    android:drawablePadding="24px"
+                    android:gravity="center"
+                    android:text="小铺收益"
+                    android:textColor="@color/black_333"
+                    android:textSize="30px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/ic_right_gray"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="45px"
+                    android:layout_toRightOf="@id/tv_01"
+                    android:ellipsize="end"
+                    android:maxWidth="300px"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/black_333"
+                    android:textSize="48px"/>
+
+                <TextView
+                    android:id="@+id/tv_switcher_income"
+                    android:layout_width="66dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:layout_toRightOf="@id/tv_shop_income"
+                    android:background="@drawable/bg_btn_blue_biankuang_10dp"
+                    android:gravity="center"
+                    android:text="交易金额"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="24px"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_trade_amount"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="2px"
+                android:background="@drawable/bg_btn_white">
+
+                <TextView
+                    android:id="@+id/tv_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:drawableLeft="@drawable/ic_jiayoudanshu"
+                    android:drawablePadding="24px"
+                    android:gravity="center"
+                    android:text="成交单数"
+                    android:textColor="@color/black_333"
+                    android:textSize="30px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/ic_right_gray"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="45px"
+                    android:layout_toRightOf="@id/tv_02"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/black_333"
+                    android:textSize="48px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="20px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="月统计趋势"
+                    android:textColor="@color/gray_666"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:id="@+id/tv_switcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:drawableLeft="@drawable/ic_qiehuanjine_blue"
+                    android:drawablePadding="12px"
+                    android:gravity="center"
+                    android:text="切换到账金额"
+                    android:textColor="@color/blue_449ffb"
+                    android:textSize="32px"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:paddingRight="10px">
+
+                    <TextView
+                        android:id="@+id/tv_switcher_daozhang"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="20px"
+                        android:text="到账金额"
+                        android:textColor="@color/blue_449ffb"
+                        android:textSize="28px"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="32px"
+                        android:layout_gravity="center"
+                        android:background="@color/gray_e5e5e5"/>
+
+                    <TextView
+                        android:id="@+id/tv_switcher_jiaoyi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="20px"
+                        android:text="交易金额"
+                        android:textColor="@color/gray_b4b4b4"
+                        android:textSize="28px"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="280px"
+                android:layout_marginTop="2px">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

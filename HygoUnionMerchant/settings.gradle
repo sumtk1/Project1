@@ -1,0 +1,1 @@
+include ':app', ':banner', ':galleryfinal', ':wlwsdk', ':reclib-qq', ':chatsdk', ':photopicker'
